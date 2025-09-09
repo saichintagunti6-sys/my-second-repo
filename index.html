@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Watch Dashboard</title>
+  <style>
+    /* ===== Global Styles ===== */
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: #f8f9fa;
+      color: #333;
+    }
+    header {
+      background: #111;
+      color: white;
+      padding: 15px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #f0c040;
+    }
+
+    /* ===== Dashboard Layout ===== */
+    .dashboard {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      min-height: calc(100vh - 60px);
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background: #222;
+      color: white;
+      padding: 20px;
+    }
+    .sidebar h2 {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar ul li {
+      margin-bottom: 15px;
+    }
+    .sidebar ul li a {
+      color: #ddd;
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+    .sidebar ul li a:hover {
+      color: #f0c040;
+    }
+
+    /* Main Content */
+    .main {
+      padding: 20px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      max-width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .card h3 {
+      margin: 10px 0 5px;
+    }
+    .card p {
+      font-size: 14px;
+      color: #666;
+    }
+    .btn {
+      margin-top: 10px;
+      display: inline-block;
+      padding: 8px 16px;
+      background: #111;
+      color: white;
+      border-radius: 6px;
+      font-size: 13px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #f0c040;
+      color: #111;
+    }
+    /* Footer */
+    footer {
+      background: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 10px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>⌚ Watch Dashboard</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">Orders</a>
+      <a href="#">Profile</a>
+    </nav>
+  </header>
+
+  <!-- Dashboard -->
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Menu</h2>
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">New Watches</a></li>
+        <li><a href="#">Best Sellers</a></li>
+        <li><a href="#">Customers</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+      <h2>Available Watches</h2>
+      <div class="cards">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600" alt="Watch 1">
+          <h3>Classic Leather</h3>
+          <p>Elegant design with premium leather strap.</p>
+          <a href="#" class="btn">Buy Now</a>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=600" alt="Watch 2">
+          <h3>Sports Edition</h3>
+          <p>Durable and waterproof digital sports watch.</p>
+          <a href="#" class="btn">Buy Now</a>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1518544801958-efcbf8a7ec10?w=600" alt="Watch 3">
+          <h3>Luxury Gold</h3>
+          <p>Luxury gold-plated chronograph for elites.</p>
+          <a href="#" class="btn">Buy Now</a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Watch Dashboard. All rights reserved.
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Example: alert when clicking "Buy Now"
+    document.querySelectorAll(".btn").forEach(btn => {
+      btn.addEventListener("click", function(e){
+        e.preventDefault();
+        alert("Item added to cart!");
+      });
+    });
+  </script>
+</body>
+</html>
